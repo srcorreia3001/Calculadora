@@ -1,0 +1,25 @@
+name: Compilar APK Android
+
+on:
+  push:
+    branches: [ main, master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Baixar código do repositório
+      uses: actions/checkout@v3
+
+    - name: Compilar com Buildozer
+      uses: ArtemSBulgakov/buildozer-action@v1
+      id: buildozer
+      with:
+        command: buildozer -v android debug
+
+    - name: Salvar arquivo APK gerado
+      uses: actions/upload-artifact@v3
+      with:
+        name: app-calculadora
+        path: ${{ steps.buildozer.outputs.filename }}
