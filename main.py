@@ -132,5 +132,5 @@ class CalculadoraApp(App):
 if __name__ == '__main__':
     CalculadoraApp().run()
 
-#copilação apk
+#copilação apk android
 
