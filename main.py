@@ -89,7 +89,7 @@ class CalculadoraApp(App):
         
         # Assinatura sutil e visível no rodapé
         assinatura = Label(
-            text="por tiagodata.com.br",
+            text="Por:www.tiagodata.com.br",
             font_size=13,
             size_hint=(1, 0.04),
             color=get_color_from_hex('#7A7A99'), # Tom sutil acinzentado/azulado
